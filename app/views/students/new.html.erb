@@ -10,16 +10,16 @@
 </ul>
 	<% end %>
 	<p>
-		<%= f.label :student_id %> ID<br/>
+		<%= f.label :employee %> id<br/>
 		<%= f.text_field :student_id %><br/>
-		<%= f.label :student_name %><br/>
+		<%= f.label :emoloyee_name %><br/>
 		<%= f.text_field :student_name %><br/>
-		<%= f.label :student_section %><br/>
+		<%= f.label :employee_contact %><br/>
 		<%= f.text_field :student_section %>	
 	</p>
 
 	<p>
-		<%= f.submit "Add new Student" %>
+		<%= f.submit "Add new Employee" %>
 	</p>
 
 	<p><%= link_to "Back", students_path %></p>

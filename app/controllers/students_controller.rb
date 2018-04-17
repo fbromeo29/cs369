@@ -16,7 +16,7 @@ class StudentsController < ApplicationController
    	@student = Student.new(params[:student].permit(:student_id, :student_name, :student_section))
 
    	if @student.save
-   		redirect_to students_path, :notice => "Student has been added"
+   		redirect_to students_path, :notice => "Employee has been added"
    	else
    		render "new"
    	end 
@@ -30,7 +30,7 @@ class StudentsController < ApplicationController
       @student = Student.find(params[:id])
 
       if @student.update_attributes(params[:student].permit(:student_id, :student_name, :student_section))
-         redirect_to students_path, :notice => "Student has been updated"
+         redirect_to students_path, :notice => "Employee has been updated"
       else 
          render "edit"
    end
@@ -39,7 +39,7 @@ end
    def destroy
       @student = Student.find(params[:id])
       @student.destroy
-      redirect_to students_path, :notice => "Student has been deleted"
+      redirect_to students_path, :notice => "Employee has been deleted"
    end
 
 	
